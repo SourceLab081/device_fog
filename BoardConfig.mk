@@ -189,7 +189,6 @@ TARGET_OTA_ASSERT_DEVICE := fog,rain,wind
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := bengal
 
 # Properties
