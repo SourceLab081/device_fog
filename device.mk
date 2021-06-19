@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libstagefright_softomx_plugin.vendor \
-    libtinycompress
+    libtinycompress \
+    sound_trigger.primary.bengal
 
 # Audio Daemon
 PRODUCT_PACKAGES += \
