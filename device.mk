@@ -432,6 +432,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/lineage/interfaces/power-libperfmgr \
+    $(LOCAL_PATH)/hals/display/display-commonsys-intf \
     hardware/xiaomi
 
 # Servicetracker
