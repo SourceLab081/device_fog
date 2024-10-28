@@ -23,6 +23,9 @@ USE_PIXEL_CHARGING := true
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# Dolby Atmos
+TARGET_USE_ECHO := true
+
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
