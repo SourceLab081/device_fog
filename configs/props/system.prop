@@ -112,3 +112,8 @@ ro.hardware.wlan.dbs=0
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# DroidX Props
+ro.droidx.maintainer=Iverz
+ro.droidx.chipset=Snapdragon 680 4G
+ro.droidx.display_resolution=6.71" IPS LCD 720x1650
