@@ -264,8 +264,35 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # Lights
-# PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
+# Logging
+SPAMMY_LOG_TAGS := \
+    AnalyticsService \
+    CamX \
+    CHIUSECASE \
+    cnss-daemon \
+    KernelCpuUidActiveTimeReader \
+    Tracer \
+    NearbySharing \
+    IntervalStats \
+    CompatibilityChangeReporter \
+    SQLiteLog \
+    wificond \
+    b/223498680 \
+    TrafficStats \
+    ContrastColorUtil \
+    QC-time-services \
+    GRALLOC \
+    gralloc4 \
+    HWUI \
+    WifiHAL
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_SYSTEM_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
+endif
 
 # Media
 PRODUCT_PACKAGES += \
