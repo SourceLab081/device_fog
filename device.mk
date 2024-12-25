@@ -346,6 +346,7 @@ PRODUCT_PACKAGES += \
     FrameworksRain \
     FrameworksWind \
     LineageSDKFog \
+    NcmTetheringOverlay \
     NoCutoutOverlay \
     SettingsFog \
     SettingsProviderFog \
