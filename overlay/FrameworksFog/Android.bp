@@ -1,7 +1,6 @@
 runtime_resource_overlay {
     name: "FrameworksFog",
     theme: "FrameworksFog",
-    sdk_version: "current",
     manifest: "AndroidManifest.xml",
     vendor: true,
 }
@@ -9,7 +8,6 @@ runtime_resource_overlay {
 runtime_resource_overlay {
     name: "FrameworksFogIndia",
     theme: "FrameworksFogIndia",
-    sdk_version: "current",
     manifest: "AndroidManifestC3QB.xml",
     vendor: true,
 }
@@ -17,7 +15,6 @@ runtime_resource_overlay {
 runtime_resource_overlay {
     name: "FrameworksRain",
     theme: "FrameworksRain",
-    sdk_version: "current",
     manifest: "AndroidManifestC3QN.xml",
     vendor: true,
 }
@@ -25,7 +22,6 @@ runtime_resource_overlay {
 runtime_resource_overlay {
     name: "FrameworksWind",
     theme: "FrameworksWind",
-    sdk_version: "current",
     manifest: "AndroidManifestC3QL.xml",
     vendor: true,
 }
