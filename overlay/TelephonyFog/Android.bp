@@ -1,6 +1,5 @@
 runtime_resource_overlay {
     name: "TelephonyFog",
     theme: "TelephonyFog",
-    sdk_version: "current",
     vendor: true,
 }

@@ -1,6 +1,5 @@
 runtime_resource_overlay {
     name: "WifiFog",
     theme: "WifiFog",
-    sdk_version: "current",
     vendor: true
 }
