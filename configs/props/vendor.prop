@@ -197,6 +197,9 @@ persist.vendor.dpmhalservice.enable=1
 debug.sf.enable_adpf_cpu_hint=false
 debug.hwui.use_hint_manager=false
 
+# Fingerprint
+persist.vendor.fingerprint.type=rear
+
 # Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
