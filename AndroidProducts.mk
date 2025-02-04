@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixelage_fog.mk
+    $(LOCAL_DIR)/infinity_fog.mk
