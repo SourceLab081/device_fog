@@ -21,6 +21,10 @@ TARGET_SUPPORTS_BLUR := true
 INFINITY_MAINTAINER := sourceslab062_gitlab
 USE_MOTO_CALCULATOR := true
 WITH_GAPPS := true
+# Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
+TARGET_BUILD_GOOGLE_TELEPHONY := true # (WITH_GAPPS must be set to true alongside)
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := UNOFFICIAL
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
