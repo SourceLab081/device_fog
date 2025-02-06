@@ -15,16 +15,16 @@ $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # infinity
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_BLUR := true
-INFINITY_MAINTAINER := sourceslab062_gitlab
-USE_MOTO_CALCULATOR := true
-WITH_GAPPS := true
-# Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
-TARGET_BUILD_GOOGLE_TELEPHONY := true # (WITH_GAPPS must be set to true alongside)
 # Whether you are compiling being an OFFICIAL Maintainer:
 INFINITY_BUILD_TYPE := UNOFFICIAL
+
+# Whether the compiled package ships Google Apps:
+WITH_GAPPS := true
+
+# Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
+TARGET_BUILD_GOOGLE_TELEPHONY := true # (WITH_GAPPS must be set to true alongside)
+INFINITY_MAINTAINER := sourceslab062_gitlab
+USE_MOTO_CALCULATOR := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
