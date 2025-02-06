@@ -8,8 +8,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit Carbon product configuration
-$(call inherit-product, vendor/carbon/config/common.mk)
+# Inherit from kebab device
+$(call inherit-product, device/oneplus/kebab/device.mk)
+
+# Inherit Carbon GSM telephony parts
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from fog device
@@ -20,6 +24,9 @@ PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
+
+PRODUCT_SYSTEM_NAME := Redmi10C
+PRODUCT_SYSTEM_DEVICE := Redmi10C
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
