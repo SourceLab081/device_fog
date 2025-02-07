@@ -8,6 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/droidx_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    droidx_fog-ap2a-user \
-    droidx_fog-ap2a-userdebug \
-    droidx_fog-ap2a-eng
+    aosp_fog-user \
+    aosp_fog-userdebug \
+    aosp_fog-eng
