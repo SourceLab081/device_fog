@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/droidx_fog.mk
+    $(LOCAL_DIR)/aosp_fog.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_fog-user \
