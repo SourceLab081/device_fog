@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common HorizonDroid stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Inherit from fog device
+$(call inherit-product, device/xiaomi/fog/device.mk)
+
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
@@ -24,19 +27,19 @@ TARGET_BUILD_VIMUSIC := true
 
 # Maintainer
 HORIZON_MAINTAINER := sourceslab062_gitlab
-HORIZON_BUILD_TYPE := UNOFFICIAL
-# Inherit from fog device
-$(call inherit-product, device/xiaomi/fog/device.mk)
+CUSTOM_BUILD_TYPE := UNOFFICIAL
+
 
 PRODUCT_NAME := aosp_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
-
-PRODUCT_SYSTEM_NAME := fog_global
+PRODUCT_SYSTEM_NAME := fog
 PRODUCT_SYSTEM_DEVICE := fog
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_VENDOR := xiaomi
+TARGET_VENDOR_PRODUCT_NAME := fog
 
 BUILD_FINGERPRINT := Redmi/fog_global/fog:13/TKQ1.221114.001/V14.0.5.0.TGEMIXM:user/release-keys
