@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Signing keys
+$(call inherit-product, vendor/extra/product.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -444,9 +447,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/xiaomi
-
-# Signing
-include vendor/pixelage-priv/keys/keys.mk
 
 # Update engine
 PRODUCT_PACKAGES += \
