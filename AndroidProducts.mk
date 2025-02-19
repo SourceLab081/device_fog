@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fog.mk
+    $(LOCAL_DIR)/bootleggers_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_fog-user \
-    derp_fog-userdebug \
-    derp_fog-eng
+    bootleggers_fog-user \
+    bootleggers_fog-userdebug \
+    bootleggers_fog-eng
