@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_fog.mk
+    $(LOCAL_DIR)/bootleggers_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_fog-user \
-    afterlife_fog-userdebug \
-    afterlife_fog-eng
+    bootleggers_fog-user \
+    bootleggers_fog-userdebug \
+    bootleggers_fog-eng
