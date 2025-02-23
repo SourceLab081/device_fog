@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fog.mk
+    $(LOCAL_DIR)/cipher_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_fog-user \
-    derp_fog-userdebug \
-    derp_fog-eng
+    cipher_fog-ap3a-user \
+    cipher_fog-ap3a-userdebug \
+    cipher_fog-ap3a-eng
