@@ -8,17 +8,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common bootleggers stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+# Inherit some common Cipher stuff.
+$(call inherit-product, vendor/cipher/config/common_full_phone.mk)
 
-# AfterLife flags
+
 TARGET_BOOT_ANIMATION_RES := 720
+# Cipher Ify
+CIPHER_MAINTAINER := sourceslab062
+CIPHER_OFFICIAL := true
+CIPHER_GAPPS := false
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_CALL_RECORDING_SUPPORTED := true
 
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := bootleggers_fog
+PRODUCT_NAME := cipher_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

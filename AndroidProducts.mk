@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bootleggers_fog.mk
+    $(LOCAL_DIR)/cipher_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    bootleggers_fog-user \
-    bootleggers_fog-userdebug \
-    bootleggers_fog-eng
+    cipher_fog-user \
+    cipher_fog-userdebug \
+    cipher_fog-eng
