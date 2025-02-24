@@ -420,12 +420,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
+#PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/afterlife/interfaces/power-libperfmgr \
     hardware/xiaomi
+
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) 
 
 # Servicetracker
 PRODUCT_PACKAGES += \
