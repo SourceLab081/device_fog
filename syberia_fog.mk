@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 The syberiaOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,19 +9,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := false
+$(call inherit-product, vendor/syberia/config/common_full_phone.mk)
 
-# GMS
-WITH_GMS := true
-TARGET_USES_MINI_GAPPS := true
+TARGET_BOOT_ANIMATION_RES := 720
+DEVICE_MAINTAINER := sourceslab062(gitlab)
+
+# Syberia Stuff
+SYBERIA_BUILD_TYPE := UNOFFICIAL
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := lineage_fog
+PRODUCT_NAME := syberia_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
