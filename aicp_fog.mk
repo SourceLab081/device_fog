@@ -8,20 +8,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := false
+# Inherit common AICP configurations
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
-# GMS
-WITH_GMS := true
-TARGET_USES_MINI_GAPPS := true
+DEVICE_MAINTAINER := sourceslab062(gitlab)
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := lineage_fog
+PRODUCT_NAME := aicp_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
