@@ -884,16 +884,17 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen - from MIUI
-vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
-vendor/lib/libcapiv2svacnn.so|c897fbba664fcb0ea1951d3220d8db54ae0d7995
-vendor/lib/libcapiv2vop.so|1cceaefcc1ca55de5bc932a846091e6702c5d508
-vendor/lib/libgcs-calwrapper.so|110f1011c6741a4c2567f4337d450ab012e921f2
-vendor/lib/libgcs-ipc.so|228a702c4ed54d96058423128dfc73df1fcd3b64
-vendor/lib/libgcs-osal.so|f79964988de0a9163f938ab4fd75ab133bd40da8
-vendor/lib/libgcs.so|c31165618508563aae20c2c9398c971a0922892b
-vendor/lib/liblistensoundmodel2.so|8f61cb99cee70333b6848847297d5366759ebc00
-vendor/lib/libmulawdec.so|89ebb1d9e77911f1abe37405016839d8436a9825
-vendor/lib/libsmwrapper.so|e9c02a944c438adc37ff3598ea35ceb35c95b088
+vendor/lib/hw/sound_trigger.primary.bengal.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libcapiv2svacnn.so
+vendor/lib/libcapiv2vop.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/liblistensoundmodel2.so
+vendor/lib/libmulawdec.so
+vendor/lib/libsmwrapper.so
 
 # Media
 system_ext/lib/libmmosal.so
