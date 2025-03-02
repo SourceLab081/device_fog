@@ -331,7 +331,6 @@ PRODUCT_PACKAGES += \
     FrameworksFogIN2 \
     LineageSDKFog \
     NoCutoutOverlay \
-    NotchBarKiller \
     SettingsFog \
     SettingsProviderFog \
     SettingsProviderFogCommon \
