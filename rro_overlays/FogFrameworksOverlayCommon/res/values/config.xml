@@ -457,18 +457,9 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -40 V 68 H 40 V 0 H 0 Z</string>
 
-    <!-- Whether the display cutout region of the main built-in display should be forced to
-        black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-    -->
-    <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
-
-    <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
-         Note that while rounded.xml includes the entire path (including the horizontal and vertical
-         corner edges), this pulls out just the curve.
-     -->
-    <string name="config_rounded_mask" translatable="false">
-        m0,68v0C0,10.36 40.721,0 68,0H0Z
-    </string>
+    <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+         activated. -->
+    <integer name="config_nightDisplayColorTemperatureDefault">3850</integer>
 
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
     <dimen name="config_rounded_mask_size">68px</dimen>
