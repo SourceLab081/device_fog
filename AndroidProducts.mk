@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fog.mk
+    $(LOCAL_DIR)/halcyon_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_fog-user \
-    derp_fog-userdebug \
-    derp_fog-eng
+    halcyon_fog-user \
+    halcyon_fog-userdebug \
+    halcyon_fog-eng
