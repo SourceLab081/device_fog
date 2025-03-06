@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fog.mk
+    $(LOCAL_DIR)/horizon_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_fog-user \
-    derp_fog-userdebug \
-    derp_fog-eng
+    horizon_fog-user \
+    horizon_fog-userdebug \
+    horizon_fog-eng

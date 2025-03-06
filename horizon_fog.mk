@@ -8,23 +8,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
-TARGET_NOT_USES_BLUR := true
-TARGET_SUPPORTS_QUICK_TAP := false
-DERP_VERSION_APPEND_TIME_OF_DAY := true
+# Inherit some HorizonDroid stuffs
+$(call inherit-product, vendor/horizon/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := false
-
-# Gapps
-TARGET_USES_MINI_GAPPS := true
+HORIZON_MAINTAINER := sourceslab062_gitlab
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := derp_fog
+PRODUCT_NAME := horizon_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
