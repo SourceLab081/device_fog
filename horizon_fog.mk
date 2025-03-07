@@ -16,7 +16,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := false
 
 # Gapps
-WITH_GMS := true
+WITH_GMS := false
 
 TARGET_BOOT_ANIMATION_RES := 720
 HORIZON_MAINTAINER := sourceslab062_gitlab
