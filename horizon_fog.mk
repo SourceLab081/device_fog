@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/horizon/config/common_full_phone.mk)
 
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_QUICK_TAP := false
 TARGET_ENABLE_BLUR := false
 
 # Gapps
