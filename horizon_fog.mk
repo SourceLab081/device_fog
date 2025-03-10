@@ -14,6 +14,7 @@ $(call inherit-product, vendor/horizon/config/common_full_phone.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := false
+WITH_GMS : =true
 
 TARGET_BOOT_ANIMATION_RES := 720
 HORIZON_MAINTAINER := sourceslab062_gitlab
