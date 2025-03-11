@@ -8,16 +8,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common AICP configurations
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+# Inherit some common EunoiaOS stuff
+$(call inherit-product, vendor/eunoia/config/common_full_phone.mk)
 
 DEVICE_MAINTAINER := sourceslab062(gitlab)
+TARGET_BOOTANIMATION_NAME := 720
 TARGET_BOOT_ANIMATION_RES := 720
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := aicp_fog
+PRODUCT_NAME := eunoia_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
