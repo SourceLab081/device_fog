@@ -5,9 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fog.mk
-
-COMMON_LUNCH_CHOICES := \
-    derp_fog-user \
-    derp_fog-userdebug \
-    derp_fog-eng
+    $(LOCAL_DIR)/genesis_fog.mk
