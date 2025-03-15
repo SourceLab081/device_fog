@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/horizon_fog.mk
+    $(LOCAL_DIR)/droidx_fog.mk
 
 
 
