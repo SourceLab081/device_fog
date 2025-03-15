@@ -8,6 +8,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit from fog device
+$(call inherit-product, device/xiaomi/fog/device.mk)
+
 # Inherit some HorizonDroid stuffs
 $(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
@@ -19,8 +22,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 DROIDX_MAINTAINER := sourceslab062_gitlab
 DROIDX_BUILD_TYPE := UNOFFICIAL
 
-# Inherit from fog device
-$(call inherit-product, device/xiaomi/fog/device.mk)
+
 
 PRODUCT_NAME := droidx_fog
 PRODUCT_DEVICE := fog
@@ -30,4 +32,6 @@ PRODUCT_MODEL := Redmi 10C
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-BUILDFINGERPRINT := "Redmi/fog_global/fog:13/TKQ1.221114.001/V14.0.8.0.TGEMIXM:user/release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+     BuildDesc="fog_global-user 13 TKQ1.221114.001 V14.0.8.0.TGEMIXM release-keys" \
+     BuildFingerprint=Redmi/fog_global/fog:13/TKQ1.221114.001/V14.0.8.0.TGEMIXM:user/release-keys
