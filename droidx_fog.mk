@@ -16,6 +16,7 @@ $(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
 TARGET_FACE_UNLOCK_SUPPORTED := true
 DROIDX_GAPPS := true
+TARGET_USES_PICO_GAPPS := true
 WITH_GMS := true
 
 TARGET_BOOT_ANIMATION_RES := 720
