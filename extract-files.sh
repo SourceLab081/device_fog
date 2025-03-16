@@ -85,16 +85,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
-        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --remove-needed "libhidlbase.so" "${2}"
-            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
-            ;;
-        vendor/lib64/com.fingerprints.extension@1.0.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --remove-needed "libhidlbase.so" "${2}"
-            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
-            ;;
         vendor/etc/init/vendor.sensors.sscrpcd.rc)
             [ "$2" = "" ] && return 0
             sed -i 's|class early_hal|class core|g' "${2}"
@@ -102,7 +92,7 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/atfwd@2.0.policy)
             [ "$2" = "" ] && return 0
             echo 'gettid: 1' >> ${2}
-            ;; 
+            ;;
         *)
             return 1
             ;;
