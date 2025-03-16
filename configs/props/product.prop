@@ -1,5 +1,6 @@
 # Audio
 audio_para_version=C3Q-Audiopara-V01-20211102
+audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
 ro.config.vc_call_vol_steps=11
@@ -32,18 +33,18 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 
-# LMKD
-ro.lmk.log_stats=false
-ro.lmk.kill_heaviest_task=false
-ro.lmk.kill_timeout_ms=100
-ro.lmk.use_minfree_levels=true
-ro.lmk.critical_upgrade=true
-ro.lmk.upgrade_pressure=40
-ro.lmk.downgrade_pressure=60
-ro.lmk.filecache_min_kb=153600
-ro.lmk.thrashing_limit=30
-ro.lmk.thrashing_limit_decay=50
-ro.lmk.stall_limit_critical=40
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Low memory killer daemon
+ro.lmk.kill_heaviest_task=true
+ro.lmk.thrashing_limit=50
+ro.lmk.thrashing_limit_decay=25
+ro.lmk.psi_complete_stall_ms=80
+ro.lmk.psi_partial_stall_ms=50
+
+# Set support hide display cutout feature
+ro.support_hide_display_cutout=true
 
 # Phantom process monitoring
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
@@ -51,5 +52,8 @@ sys.fflag.override.settings_enable_monitor_phantom_procs=false
 # Radio
 persist.vendor.qti.telephony.vt_cam_interface=2
 
-# Disable RescueParty due to high risk of data loss
-persist.sys.disable_rescue=true
+# Battery Saving
+ro.vold.umsdirtyratio=20 
+ro.ril.disable.power.collapse=0 
+power.saving.mode=1
+pm.sleep_mode=1
