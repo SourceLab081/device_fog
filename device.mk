@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.primary.default \
     audio.r_submix.default \
@@ -48,7 +49,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libstagefright_softomx_plugin.vendor \
-    libtinycompress
+    libtinycompress \
+    sound_trigger.primary.bengal
 
 # Audio Daemon
 PRODUCT_PACKAGES += \

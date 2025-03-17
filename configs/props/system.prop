@@ -61,6 +61,7 @@ persist.log.tag.gralloc4=S
 
 # Media
 debug.stagefright.c2inputsurface=-1
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
@@ -97,6 +98,16 @@ ril.subscription.types=NV,RUIM
 ro.telephony.default_network=33,33
 ro.vendor.radio.features_common=3
 telephony.lteOnCdmaDevice=1
+
+# RmNet data
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.dl_mode=5
+persist.data.df.iwlan_mux=9
+persist.data.df.mux_count=8
+persist.data.df.ul_mode=5
+persist.data.wda.enable=true
+persist.rmnet.data.enable=true
 
 # Time-services
 persist.timed.enable=true
