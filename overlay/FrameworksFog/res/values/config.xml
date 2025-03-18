@@ -350,11 +350,11 @@
          corner edges), this pulls out just the curve.
      -->
     <string name="config_rounded_mask" translatable="false">
-        M0,60V0h60C26.86,0 0,26.86 0,60Z
+        m0,68v0C0,10.36 40.721,0 68,0H0Z
     </string>
 
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
-    <dimen name="config_rounded_mask_size">60px</dimen>
+    <dimen name="config_rounded_mask_size">68px</dimen>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -645,7 +645,7 @@
          in certain places to reduce RAM footprint. Allows to tune down 
          device's memory use without going to the point of causing applications to turn
          off features. -->
-    <bool name="config_avoidGfxAccel">true</bool>
+    <bool name="config_avoidGfxAccel">false</bool>
 
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>

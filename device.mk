@@ -4,14 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Signing keys
-#$(call inherit-product, vendor/extra/product.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -331,8 +331,6 @@ PRODUCT_PACKAGES += \
     FrameworksFog \
     FrameworksFogIN2 \
     LineageSDKFog \
-    NoCutoutOverlay \
-    NotchBarKiller \
     SettingsFog \
     SettingsProviderFog \
     SettingsProviderFogCommon \
@@ -344,6 +342,10 @@ PRODUCT_PACKAGES += \
     TelephonyFog \
     WifiFog
 
+PRODUCT_PACKAGES += \
+     NoCutoutOverlay \
+     AvoidAppsInCutoutOverlay
+     
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
