@@ -521,6 +521,8 @@ vendor/lib64/libhdr_tm.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libqservice.so
 vendor/lib/libdisplaydebug.so
+vendor/lib/libsdmutils.so
+vendor/lib64/libsdmutils.so
 
 # Display SDM
 vendor/lib64/libdisplayqos.so
