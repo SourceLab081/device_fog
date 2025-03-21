@@ -334,6 +334,12 @@ PRODUCT_PACKAGES += \
     TelephonyFog \
     WifiFog
 
+# Partitions
+ PRODUCT_PACKAGES += \
+     vendor_bt_firmware_mountpoint \
+     vendor_dsp_mountpoint \
+     vendor_firmware_mnt_mountpoint
+ 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
