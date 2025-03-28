@@ -15,6 +15,9 @@ TARGET_BOOT_ANIMATION_RES := 720
 # Inherit GMS if available
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
+TARGET_INCLUDE_GRAMOPHONE := true
+TARGET_INCLUDE_GRAPHENE_CAMERA := true
+
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
