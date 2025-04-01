@@ -517,16 +517,6 @@ vendor/etc/SVIConfig.xml
 # Display HDR
 vendor/lib64/libhdr_tm.so
 
-# Adding these, coz error not found
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libqservice.so
-vendor/lib/libdisplaydebug.so
-vendor/lib/libsdmutils.so
-vendor/lib64/libsdmutils.so
-vendor/lib64/libqdutils.so 
-vendor/lib/libdisplayconfig.qti.so
-vendor/lib64/libdisplayconfig.qti.so
-
 # Display SDM
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
