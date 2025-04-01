@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/fog
-KERNEL_PATH := device/xiaomi/fog-kernel
 
 # A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
