@@ -1,0 +1,7 @@
+[
+  {
+    "repository": "SourceLab081/uvite",
+    "target_path": "kernel/xiaomi/fog",
+     "revision": "vauxite-fog"
+  }
+]

@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2022 The horizonOS Project
+# Copyright (C) 2022 The mikuOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/horizon_fog.mk
+    $(LOCAL_DIR)/miku_fog.mk
 
 
 
