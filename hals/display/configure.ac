@@ -59,7 +59,8 @@ AC_CONFIG_FILES([ \
         libqservice/Makefile \
         libqdutils/Makefile \
         libdebug/Makefile \
-        sdm/libs/utils/Makefile \
+        libdrmutils/Makefile \
+	sdm/libs/utils/Makefile \
         sdm/libs/core/Makefile
         ])
 AC_OUTPUT
