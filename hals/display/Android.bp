@@ -11,6 +11,7 @@ cc_defaults {
         "libcutils",
         "libutils",
     ],
+    header_libs: ["display_headers"],
 }
 
 cc_library_headers {
@@ -21,6 +22,19 @@ cc_library_headers {
     ],
 }
 
+cc_library_headers {
+    name: "display_headers",
+    vendor: true,
+    export_include_dirs: [
+        "include",
+        "libdrmutils",
+        "libqdutils",
+        "libqservice",
+        "sdm/include",
+    ],
+    header_libs: ["libhardware_headers", "display_intf_headers", "debug_headers"],
+    export_header_lib_headers: ["libhardware_headers", "display_intf_headers", "debug_headers"],
+}
 
 subdirs = [
     "libqservice",
