@@ -8,22 +8,24 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some HorizonDroid stuffs
-$(call inherit-product, vendor/horizon/config/common_full_phone.mk)
-
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_ENABLE_BLUR := false
-WITH_GMS := true
+# Inherit some lineageDroid stuffs
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
+# Maintainer username
 HORIZON_MAINTAINER := sourceslab062_gitlab
-HORIZON_BUILD_TYPE := UNOFFICIAL
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Gapps flags
+WITH_GMS := true
+WITH_GMS_VARIANT := pico
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := horizon_fog
+PRODUCT_NAME := lineage_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
