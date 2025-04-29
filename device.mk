@@ -235,6 +235,8 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # Init
+$(call soong_config_set,libinit,vendor_init_lib,libinit_fog)
+
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.sh
