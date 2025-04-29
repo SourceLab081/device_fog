@@ -80,9 +80,6 @@ ODM_MANIFEST_C3QN_FILES := $(DEVICE_PATH)/configs/vintf/manifest_c3qn.xml
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fog
-
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_IMAGE_NAME  := Image
