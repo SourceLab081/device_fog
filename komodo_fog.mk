@@ -24,6 +24,10 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := false
 
+# Gapps
+WITH_GAPPS := true
+WITH_GMS_VARIANT := pico
+
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
