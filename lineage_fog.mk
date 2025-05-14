@@ -20,7 +20,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Gapps flags
 WITH_GMS := true
-WITH_GMS_VARIANT := pico
+#WITH_GMS_VARIANT := pico
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
