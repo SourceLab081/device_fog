@@ -234,6 +234,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
+
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
@@ -328,7 +332,6 @@ PRODUCT_PACKAGES += \
     DialerFog \
     FrameworksFog \
     FrameworksFogIN2 \
-    LineageSDKFog \
     SettingsFog \
     SettingsProviderFog \
     SettingsProviderFogCommon \
@@ -354,7 +357,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
-    android.hardware.power-service.lineage-libperfmgr \
+    android.hardware.power-service.xiaomi-libperfmgr \
     libqti-perfd-client
 
 PRODUCT_SOONG_NAMESPACES += \
@@ -431,7 +434,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/lineage/interfaces/power-libperfmgr \
     hardware/xiaomi
 
 # Servicetracker
