@@ -118,7 +118,7 @@ TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
 
 # Malloc
-MALLOC_SVELTE := true
+MALLOC_LOW_MEMORY := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
