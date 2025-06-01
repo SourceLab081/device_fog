@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "UpdaterOverlayFog",
+    product_specific: true,
+}

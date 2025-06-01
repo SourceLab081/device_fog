@@ -363,6 +363,7 @@ PRODUCT_PACKAGES += \
     SettingsProviderWind \
     SystemUIFog \
     TelephonyFog \
+    UpdaterOverlayFog \
     WifiFog
 
 # Partitions
