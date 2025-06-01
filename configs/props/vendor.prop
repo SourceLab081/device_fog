@@ -193,6 +193,10 @@ drm.service.enabled=true
 # DPM
 persist.vendor.dpmhalservice.enable=1
 
+# Explicitly disable ADPF
+debug.sf.enable_adpf_cpu_hint=false
+debug.hwui.use_hint_manager=false
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
