@@ -92,6 +92,10 @@ ro.nfc.port=I2C
 # NTP
 persist.backup.ntpServer=0.pool.ntp.org
 
+# PIHooks
+persist.sys.pihooks.disable.gms_key_attestation_block=true
+persist.sys.pihooks.disable.gms_props=true
+
 # RIL
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
