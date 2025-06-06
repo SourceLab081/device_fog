@@ -1,6 +1,5 @@
 runtime_resource_overlay {
     name: "SettingsProviderFogIndia",
     theme: "SettingsProviderFogIndia",
-    sdk_version: "current",
     vendor: true,
 }
