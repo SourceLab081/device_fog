@@ -8,7 +8,7 @@
         "1516800",
         "1190400"
       ],
-      "DefaultIndex": 1,
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -35,7 +35,7 @@
         "1766400",
         "1344000"
       ],
-      "DefaultIndex": 1,
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -277,6 +277,12 @@
     },
     {
       "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 200,
+      "Value": "1766400"
+    },
+    {
+      "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 200,
       "Value": "1516800"
@@ -289,21 +295,9 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 3000,
-      "Value": "2400000"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 3000,
       "Value": "2400000"
-    },
-    {
-     "PowerHint": "LAUNCH",
-     "Node": "CPULittleClusterMaxFreq",
-     "Duration": 3000,
-     "Value": "1900800"
     },
     {
       "PowerHint": "LAUNCH",
@@ -435,7 +429,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "0"
+      "Value": "1"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
