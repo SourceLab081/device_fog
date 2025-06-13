@@ -138,6 +138,9 @@ on boot
     chown system system /sys/touchpanel/double_tap
     chmod 0664 /sys/touchpanel/double_tap
 
+    # Thermal
+    start mi_thermald
+
     # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
