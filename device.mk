@@ -286,6 +286,9 @@ PRODUCT_PACKAGES += \
 # Logging
 SPAMMY_LOG_TAGS := \
     AnalyticsService \
+    CamX \
+    CHIUSECASE \
+    cnss-daemon \
     KernelCpuUidActiveTimeReader \
     Tracer \
     NearbySharing \
@@ -296,6 +299,7 @@ SPAMMY_LOG_TAGS := \
     b/223498680 \
     TrafficStats \
     ContrastColorUtil \
+    QC-time-services \
     GRALLOC \
     gralloc4 \
     HWUI \
