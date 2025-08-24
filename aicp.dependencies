@@ -1,0 +1,5 @@
+  {
+    "repository": "HorizonV2/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch":      "lineage-22.2"
+  }
