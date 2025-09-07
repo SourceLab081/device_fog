@@ -5,4 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/clover_fog.mk
+    $(LOCAL_DIR)/aosp_fog.mk
+
+
+
