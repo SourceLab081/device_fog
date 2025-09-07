@@ -8,8 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some clover stuffs
-$(call inherit-product, vendor/clover/config/common_full_phone.mk)
+# Inherit some aosp stuffs
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
 # Maintainer username
@@ -17,7 +17,7 @@ HORIZON_MAINTAINER := sourceslab062_gitlab
 
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := clover_fog
+PRODUCT_NAME := aosp_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
