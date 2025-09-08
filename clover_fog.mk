@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 The cloverOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,19 +9,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/clover/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit GMS if available
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
-TARGET_INCLUDE_GRAMOPHONE := true
-TARGET_INCLUDE_GRAPHENE_CAMERA := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := lineage_fog
+PRODUCT_NAME := clover_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
