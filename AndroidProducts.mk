@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2022 The cloverOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_fog.mk
+    $(LOCAL_DIR)/lineage_fog.mk
 
 
 
