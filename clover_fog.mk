@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The cloverOS Project
+# Copyright (C) 2022 The clover Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
