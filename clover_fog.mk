@@ -13,7 +13,7 @@ $(call inherit-product, vendor/clover/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
 # Maintainer username
-HORIZON_MAINTAINER := sourceslab062_gitlab
+CLOVER_MAINTAINER := sourceslab062_gitlab
 
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
