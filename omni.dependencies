@@ -1,0 +1,87 @@
+[
+   {
+    "remote": "omnirom",
+    "repository": "android_device_qcom_caf-sepolicy",
+    "target_path": "device/qcom/sepolicy",
+    "revision": "android-16"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_device_qcom_sepolicy_vndr",
+    "target_path": "device/qcom/sepolicy_vndr",
+    "revision": "android-16"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_external_tinycompress",
+    "target_path": "external/tinycompress",
+    "override": "platform/external/tinycompress",
+    "revision": "android-16"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_bootctrl",
+    "target_path": "hardware/qcom/bootctrl",
+    "revision": "android-15"
+    },
+   {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_wlan",
+    "target_path": "hardware/qcom-caf/wlan",
+    "revision": "android-15-caf"
+   },
+   {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8250/display",
+    "revision": "android-15-sm8250"
+   },
+   {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_lineage_interfaces",
+    "target_path": "hardware/lineage/interfaces",
+    "revision": "lineage-23.0"
+   },
+   {
+    "remote": "github",
+    "repository": "The-Clover-Project/device_lineage_sepolicy",
+    "target_path": "device/lineage/sepolicy",
+    "revision": "16"
+   },
+   {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr",
+    "target_path": "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
+    "revision": "lineage-22.2-legacy-um"
+   },  
+   {
+    "remote": "github",
+    "repository": "LineageOS/android_vendor_qcom_opensource_usb",
+    "target_path": "vendor/qcom/opensource/usb",
+    "revision": "lineage-22.2"
+   },   
+   {
+     "remote": "github",
+     "repository": "online0code/android_vendor_qcom_opensource_display",
+     "target_path": "vendor/qcom/opensource/display",
+     "revision": "android-15"
+   },
+   {
+     "remote": "github",
+     "repository": "online0code/android_vendor_qcom_opensource_display-commonsys",
+     "target_path": "vendor/qcom/opensource/commonsys/display",
+     "revision": "android-15"
+   },
+   {
+     "remote": "github",
+     "repository": "online0code/android_vendor_qcom_opensource_display-commonsys-intf",
+     "target_path": "vendor/qcom/opensource/commonsys-intf/display",
+     "revision": "android-15"
+   },
+   {
+     "remote": "omnirom",
+     "repository": "android_vendor_qcom_opensource_interfaces",
+     "target_path": "vendor/qcom/opensource/interfaces",
+     "revision": "android-16"
+   }
+]

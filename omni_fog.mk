@@ -1,15 +1,21 @@
 #
-# Copyright (C) 2022 The clover Project
+# Copyright (C) 2022 The omni Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit GSM telephony parts
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common stuff.
-$(call inherit-product, vendor/clover/config/common_full_phone.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit GMS if available
@@ -19,7 +25,7 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := clover_fog
+PRODUCT_NAME := omni_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
