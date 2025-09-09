@@ -40,7 +40,7 @@
     "remote": "github",
     "repository": "LineageOS/android_hardware_lineage_interfaces",
     "target_path": "hardware/lineage/interfaces",
-    "revision": "lineage-23.0"
+    "revision": "lineage-23"
    },
    {
     "remote": "github",
