@@ -7,7 +7,7 @@
 DEVICE_PATH := device/xiaomi/fog
 
 # MiuiCamera
--include vendor/xiaomi/miuicamera/BoardConfigMiuiCamera.mk
+# -include vendor/xiaomi/miuicamera/BoardConfigMiuiCamera.mk
 
 # A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
