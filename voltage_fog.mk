@@ -1,19 +1,17 @@
 #
-# Copyright (C) 2022 The aospOS Project
+# Copyright (C) 2022 The VoltageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+# TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common VoltageOS stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
-# Gapps
-# TARGET_BUILD_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit GMS if available
@@ -23,7 +21,7 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := aosp_fog
+PRODUCT_NAME := voltage_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
