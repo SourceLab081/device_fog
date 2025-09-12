@@ -5,8 +5,8 @@
      "revision": "vauxite-fog"
   },
   {
-    "repository": "LineageOS/android_hardware_xiaomi",
+    "repository": "yaap/hardware_xiaomi",
     "target_path": "hardware/xiaomi",
-    "revision": "lineage-22.2"
+    "revision": "sixteen"
   }
 ]
