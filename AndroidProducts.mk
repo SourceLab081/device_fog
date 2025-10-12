@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_fog.mk
+    $(LOCAL_DIR)/atlantis_fog.mk
 
 
 

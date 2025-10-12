@@ -1,16 +1,15 @@
 #
-# Copyright (C) 2022 The VoltageOS Project
+# Copyright (C) 2022 The AtlantisOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-# TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common VoltageOS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+# Inherit some common atlantisOS stuff.
+$(call inherit-product, vendor/atlantis/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
 
@@ -21,7 +20,7 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := voltage_fog
+PRODUCT_NAME := atlantis_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
