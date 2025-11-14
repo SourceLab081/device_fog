@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aicp_fog.mk
+    $(LOCAL_DIR)/witaqua_fog.mk
 
 
 
