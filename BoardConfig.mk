@@ -6,8 +6,8 @@
 
 DEVICE_PATH := device/xiaomi/fog
 
-# MiuiCamera
-# -include vendor/xiaomi/miuicamera/BoardConfigMiuiCamera.mk
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
@@ -135,6 +135,8 @@ MALLOC_LOW_MEMORY := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_FLASH_BLOCK_SIZE := 131072
