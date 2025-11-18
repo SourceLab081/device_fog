@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Signing keys
-$(call inherit-product, vendor/extra/product.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -356,6 +353,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.se.omapi.uicc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/com.nxp.mifare.xml
+
+DEVICE_PACKAGE_OVERLAYS+= \
+    $(LOCAL_PATH)/overlay 
 
 # Overlays
 PRODUCT_PACKAGES += \
