@@ -5,7 +5,7 @@
 #
 
 # Signing keys
-# $(call inherit-product, vendor/extra/product.mk)
+$(call inherit-product, vendor/extra/product.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -143,7 +143,7 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
 USE_DEX2OAT_DEBUG := false
 
 # Display
-TARGET_SCREEN_DENSITY := 360
+TARGET_SCREEN_DENSITY := 280
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
