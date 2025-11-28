@@ -359,8 +359,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FogCarrierConfigOverlay \
-    FogDialerOverlay \
-    FogDeviceAsWebcamOverlay \
     FogLineageSDKOverlay \
     FogSettingsOverlay \
     FogSystemUIOverlay \
