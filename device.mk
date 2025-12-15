@@ -364,28 +364,39 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigFog \
-    DialerFog \
-    DeviceAsWebcamFog \
-    FrameworksFog \
-    FrameworksFogCommon \
-    FrameworksFogIndia \
-    FrameworksFogPower \
-    FrameworksRain \
-    FrameworksWind \
-    LineageSDKFog \
+    FogCarrierConfigOverlay \
+    FogDialerOverlay \
+    FogDeviceAsWebcamOverlay \
+    FogLineageSDKOverlay \
+    FogSettingsOverlay \
+    FogSystemUIOverlay \
+    FogTelephonyOverlay
+
+PRODUCT_PACKAGES += \
+    FogFrameworksOverlayCommon \
+    FogSettingsProviderOverlayCommon \
+    FogWifiOverlayCommon
+
+PRODUCT_PACKAGES += \
+    FogFrameworksOverlay \
+    FogFrameworksOverlayIN \
+    FogFrameworksOverlayIN2 \
+    WindFrameworksOverlay \
+    RainFrameworksOverlay \
+    FogSettingsProviderOverlay \
+    FogSettingsProviderOverlayIN \
+    FogSettingsProviderOverlayIN2 \
+    WindSettingsProviderOverlay \
+    RainSettingsProviderOverlay \
+    FogWifiOverlay \
+    FogWifiOverlayIN \
+    FogWifiOverlayIN2 \
+    WindWifiOverlay \
+    RainWifiOverlay
+
+PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
-    NoCutoutOverlay \
-    SettingsFog \
-    SettingsProviderFog \
-    SettingsProviderFogCommon \
-    SettingsProviderFogIndia \
-    SettingsProviderFogPower \
-    SettingsProviderRain \
-    SettingsProviderWind \
-    SystemUIFog \
-    TelephonyFog \
-    WifiFog
+    NoCutoutOverlay
 
 # libtinyxml-v34
 PRODUCT_PACKAGES += \
