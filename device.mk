@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 280dpi
+PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # API Level
@@ -143,7 +143,7 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
 USE_DEX2OAT_DEBUG := false
 
 # Display
-TARGET_SCREEN_DENSITY := 280
+TARGET_SCREEN_DENSITY := 400
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
