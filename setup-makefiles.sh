@@ -31,7 +31,7 @@ function vendor_imports() {
           "device/xiaomi/fog",
           "hardware/google/interfaces",
           "hardware/google/pixel",
-          "hardware/lineage/interfaces/power-libperfmgr",
+          "hardware/voltage/interfaces/power-libperfmgr",
           "hardware/qcom-caf/bootctrl",
           "hardware/qcom-caf/common/libqti-perfd-client",
           "hardware/qcom-caf/sm8250",
