@@ -387,6 +387,10 @@ PRODUCT_PACKAGES += \
     TelephonyFog \
     WifiFog
 
+# libtinyxml-v34
+PRODUCT_PACKAGES += \
+    libtinyxml2-v34
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
