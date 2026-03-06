@@ -375,6 +375,7 @@ PRODUCT_PACKAGES += \
     FogFrameworksOverlay \
     FogFrameworksOverlayIN \
     FogFrameworksOverlayIN2 \
+    FogNoCutoutOverlay \
     FogSettingsProviderOverlay \
     FogSettingsProviderOverlayIN \
     FogSettingsProviderOverlayIN2 \
@@ -383,8 +384,7 @@ PRODUCT_PACKAGES += \
     FogWifiOverlayIN2
 
 PRODUCT_PACKAGES += \
-    NcmTetheringOverlay \
-    NoCutoutOverlay
+    NcmTetheringOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rro_overlays/config-odm.xml:$(TARGET_COPY_OUT_ODM)/overlay/config/config.xml \
