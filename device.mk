@@ -367,6 +367,7 @@ PRODUCT_PACKAGES += \
     FogCarrierConfigOverlay \
     FogDialerOverlay \
     FogLineageSDKOverlay \
+    FogNoCutoutOverlay \
     FogSettingsOverlay \
     FogSystemUIOverlay \
     FogTelephonyOverlay
@@ -394,8 +395,7 @@ PRODUCT_PACKAGES += \
     RainWifiOverlay
 
 PRODUCT_PACKAGES += \
-    NcmTetheringOverlay \
-    NoCutoutOverlay
+    NcmTetheringOverlay
 
 # libtinyxml-v34
 PRODUCT_PACKAGES += \
