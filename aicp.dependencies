@@ -1,5 +1,5 @@
   {
-    "repository": "VoltageOS/hardware_xiaomi",
+    "repository": "LineageOS/android_hardware_xiaomi",
     "target_path": "hardware/xiaomi",
-    "branch":      "16"
+    "branch":      "lineage-23.2"
   }
