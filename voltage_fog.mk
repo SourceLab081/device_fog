@@ -21,6 +21,9 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
+# test
+VOLTAGE_BUILD_TYPE := OFFICIAL
+
 PRODUCT_NAME := voltage_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
