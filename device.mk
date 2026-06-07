@@ -298,8 +298,9 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc
+    libOmxVdec 
+# \
+#    libOmxVenc
 
 PRODUCT_PACKAGES += \
     libstagefrighthw \
@@ -566,8 +567,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
