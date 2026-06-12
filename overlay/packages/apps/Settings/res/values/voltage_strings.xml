@@ -5,6 +5,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Add maintainer name -->
-    <string name="voltage_maintainer"> SourceLab081@Github </string>
+    <string name="voltage_maintainer"> SourceLab081_Github </string>
 
 </resources>
