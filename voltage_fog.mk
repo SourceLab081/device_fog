@@ -13,6 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
+VOLTAGE_BUILD_TYPE := UNOFFICIAL
 
 # Inherit GMS if available
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
