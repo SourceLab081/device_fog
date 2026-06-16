@@ -56,6 +56,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc': blob_fixup()
+        .regex_replace('writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
     'vendor/etc/init/vendor.sensors.sscrpcd.rc': blob_fixup()
         .regex_replace(r'class early_hal', 'class core'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
