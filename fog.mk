@@ -11,6 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
+ASCP_MAINTAINER := SourceLab081
+TARGET_SUPPORTS_OMX_SERVICE := false
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+TARGET_ENABLE_BLUR := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
