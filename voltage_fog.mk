@@ -14,6 +14,7 @@ $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 VOLTAGE_BUILD_TYPE := UNOFFICIAL
 TARGET_SUPPORTS_OMX_SERVICE := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
