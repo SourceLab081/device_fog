@@ -236,3 +236,4 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 
 # Inherit from the proprietary version
 include vendor/xiaomi/fog/BoardConfigVendor.mk
+override PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
