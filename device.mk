@@ -577,3 +577,4 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
