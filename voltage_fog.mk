@@ -15,7 +15,7 @@ $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
-VOLTAGE_BUILD_TYPE := UNOFFICIAL
+VOLTAGE_BUILD_TYPE := OFFICIAL
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
