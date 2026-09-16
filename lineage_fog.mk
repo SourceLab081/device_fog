@@ -21,7 +21,10 @@ WITH_GMS := false
 # Ship Pixel Launcher
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
 # disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
+# TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+RISING_BUILDTYPE := UNOFFICIAL
 
 PRODUCT_NAME := lineage_fog
 PRODUCT_DEVICE := fog
