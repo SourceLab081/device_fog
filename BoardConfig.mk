@@ -6,6 +6,8 @@
 
 DEVICE_PATH := device/xiaomi/fog
 
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 # A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_UPDATER := true
