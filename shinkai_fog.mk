@@ -19,6 +19,8 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 SHINKAI_MAINTAINER := teleg3_7
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := false
+# This ROM cannot be set as a non-GApps ROM, but it may need to be configured for the partition.
+WITH_GMS := true
 
 PRODUCT_NAME := shinkai_fog
 PRODUCT_DEVICE := fog
