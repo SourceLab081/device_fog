@@ -11,7 +11,7 @@ soong_namespace {
         "hardware/google/interfaces",
         "hardware/google/pixel/pixelstats",
         "hardware/google/pixel/power-libperfmgr",
-        "hardware/qcom-caf/bootctrl"
+        "hardware/qcom-caf/bootctrl",
         "hardware/xiaomi",
     ],
 }
