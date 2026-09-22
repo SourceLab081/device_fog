@@ -22,7 +22,8 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 # A/B ART
-BOARD_USES_SYSTEM_OTHER_ODEX := true
+BOARD_USES_SYSTEM_OTHER_ODEX := false
+PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 
 # Architecture
 TARGET_ARCH := arm64
