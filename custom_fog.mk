@@ -14,9 +14,10 @@ TARGET_BOOT_ANIMATION_RES := 720
 ASCP_MAINTAINER := SourceLab081
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
-WITH_GMS := false
+WITH_GMS := true
 TARGET_SUPPORTS_QUICK_TAP := false
-TARGET_ENABLE_BLUR := true
+TARGET_DISABLE_EPPE = true
+ASCP_OFFICIAL := false
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
