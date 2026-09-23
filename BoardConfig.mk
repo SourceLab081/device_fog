@@ -9,6 +9,8 @@ DEVICE_PATH := device/xiaomi/fog
 BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_UPDATER := true
 
+BUILD_BROKEN_DUP_RULES := true
+
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
