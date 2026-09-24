@@ -33,3 +33,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="fog_global-user 13 TKQ1.221114.001 V14.0.8.0.TGEMIXM release-keys" \
     BuildFingerprint=Redmi/fog_global/fog:13/TKQ1.221114.001/V14.0.8.0.TGEMIXM:user/release-keys
+
+# Hapus modul webview yang diwariskan dari file .mk lain
+PRODUCT_PACKAGES := $(filter-out webview, $(PRODUCT_PACKAGES))
