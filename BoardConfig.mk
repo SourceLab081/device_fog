@@ -5,6 +5,10 @@
 #
 
 DEVICE_PATH := device/xiaomi/fog
+
+# Izinkan build melanjut walau ada modul opsional bawaan AOSP yang hilang
+PRODUCT_ALLOW_MISSING_OPTIONAL_BUILD_MODULES := true
+
 # A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_UPDATER := true
