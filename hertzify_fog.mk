@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 The hertzifyOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,24 +9,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/hertzify/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-RISING_MAINTAINER="teleg3_7"
+HERTZIFY_MAINTAINER="teleg3_7"
 # Gms 
 WITH_GMS := false
 # Ship Pixel Launcher
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
-# disable/enable blur support, default is false
-# TARGET_ENABLE_BLUR := true
+TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := true
-RISING_BUILDTYPE := UNOFFICIAL
+TARGET_SUPPORTS_QUICK_TAP := false
 
-PRODUCT_NAME := lineage_fog
+PRODUCT_NAME := hertzify_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
