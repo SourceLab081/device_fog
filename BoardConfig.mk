@@ -7,7 +7,7 @@
 DEVICE_PATH := device/xiaomi/fog
 
 # Izinkan build melanjut walau ada modul opsional bawaan AOSP yang hilang
-PRODUCT_ALLOW_MISSING_OPTIONAL_BUILD_MODULES := true
+#PRODUCT_ALLOW_MISSING_OPTIONAL_BUILD_MODULES := true
 
 # Bypass validasi daftar API tersembunyi (Hidden API Check)
 UNSAFE_DISABLE_HIDDENAPI_FLAGS := true
