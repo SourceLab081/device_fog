@@ -15,6 +15,8 @@ TARGET_BOOT_ANIMATION_RES := 720
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
+PRODUCT_PACKAGES := $(filter-out webview, $(PRODUCT_PACKAGES))
+
 TARGET_SUPPORTS_OMX_SERVICE := false
 SHINKAI_MAINTAINER := teleg3_7
 TARGET_FACE_UNLOCK_SUPPORTED := true
