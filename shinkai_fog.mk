@@ -18,10 +18,9 @@ $(call inherit-product, device/xiaomi/fog/device.mk)
 
 TARGET_SUPPORTS_OMX_SERVICE := false
 SHINKAI_MAINTAINER := teleg3_7
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := false
-# This ROM cannot be set as a non-GApps ROM, but it may need to be configured for the partition.
+PERF_ANIM_OVERRIDE := true
 WITH_GMS := true
+TARGET_GMS_VARIANT := pico
 
 PRODUCT_NAME := shinkai_fog
 PRODUCT_DEVICE := fog
