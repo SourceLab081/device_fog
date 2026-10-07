@@ -6,7 +6,7 @@
 
 DEVICE_PATH := device/xiaomi/fog
 
-BUILD_BROKEN_DUP_RULES := true
+# BUILD_BROKEN_DUP_RULES := true
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -28,7 +28,7 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 # A/B ART
-BOARD_USES_SYSTEM_OTHER_ODEX := true
+# BOARD_USES_SYSTEM_OTHER_ODEX := true
 
 # Architecture
 TARGET_ARCH := arm64
