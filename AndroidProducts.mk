@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/shinkai_fog.mk
+    $(LOCAL_DIR)/penguin_fog.mk
