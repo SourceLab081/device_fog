@@ -48,6 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 -include vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
+ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
