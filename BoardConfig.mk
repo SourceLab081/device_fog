@@ -76,6 +76,9 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
 
+#DISPLAY
+TARGET_SCREEN_DENSITY := 270
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/hidl/xiaomi_framework_compatibility_matrix.xml
