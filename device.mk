@@ -464,12 +464,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel/power-libperfmgr \
-    hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/xiaomi \
-    vendor/qcom/opensource/usb/etc
+    hardware/xiaomi
 
 # Servicetracker
 PRODUCT_PACKAGES += \
