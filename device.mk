@@ -616,7 +616,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lmk.use_minfree_levels=t
 
 # Display
-TARGET_USE_AIDL_QTI_MEMTRACK := tr
-    
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
