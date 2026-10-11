@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/penguin_fog.mk
+    $(LOCAL_DIR)/aospa_fog.mk

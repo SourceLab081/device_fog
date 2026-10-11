@@ -6,20 +6,21 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit some common stuff.
-$(call inherit-product, vendor/penguin/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
+ # Inherit from the AOSPA configuration.
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 TARGET_SUPPORTS_OMX_SERVICE := false
+TARGET_USES_BLUR := true    
 
-
-PRODUCT_NAME := penguin_fog
+PRODUCT_NAME := aospa_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
