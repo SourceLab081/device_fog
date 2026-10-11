@@ -18,8 +18,19 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'hardware/qcom/display',
+    'hardware/qcom/display/gralloc',
+    'hardware/qcom/display/libdebug',
+    'hardware/qcom/display/sde-drm',
+    'hardware/qcom/media/mm-core',
     'hardware/xiaomi',
+    'vendor/qcom/common/vendor/display',
+    'vendor/qcom/common/vendor/display/4.19',
+    'vendor/qcom/common/vendor/gps-legacy',
+    'vendor/qcom/common/vendor/keymaster',
+    'vendor/qcom/common/vendor/wlan-legacy',
 ]
+
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f"{lib}_{partition}" if partition == "vendor" else None
@@ -108,7 +119,7 @@ blob_fixups: blob_fixups_user_type = {
 
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
-        
+
     # "${SIGSCAN}" -p "13 0A 00 94" -P "1F 20 03 D5"
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
         .sig_replace('13 0A 00 94', '1F 20 03 D5'),
