@@ -41,7 +41,26 @@ include hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_P
 
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
-    
+
+# QC common
+TARGET_COMMON_QTI_COMPONENTS += \
+    alarm \
+    audio \
+    av \
+    bt \
+    charging \
+    display \
+    gps \
+    init \
+    keymaster \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wfd \
+    wlan
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi
@@ -568,5 +587,36 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
+# Rmnet data
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.rmnet.data.enable=true \
+    persist.data.wda.enable=true \
+    persist.data.df.dl_mode=5 \
+    persist.data.df.ul_mode=5 \
+    persist.data.df.agg.dl_pkt=10 \
+    persist.data.df.agg.dl_size=4096 \
+    persist.data.df.mux_count=8 \
+    persist.data.df.iwlan_mux=9 \
+    persist.data.df.dev_name=rmnet_usb0
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.config.vc_call_vol_steps=11
+
+# LMK
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lmk.critical_upgrade=true \
+    ro.lmk.downgrade_pressure=60 \
+    ro.lmk.filecache_min_kb=153600  \
+    ro.lmk.kill_heaviest_task=false \
+    ro.lmk.kill_timeout_ms=100 \
+    ro.lmk.stall_limit_critical=40 \
+    ro.lmk.thrashing_limit=30 \
+    ro.lmk.thrashing_limit_decay=50 \
+    ro.lmk.upgrade_pressure=40 \
+    ro.lmk.use_minfree_levels=t
+
+# Display
+TARGET_USE_AIDL_QTI_MEMTRACK := tr
+    
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
