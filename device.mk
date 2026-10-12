@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+#$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -189,7 +189,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.volume.metadata.method=dm-default-key
 
 # Dexpreopt
-PRODUCT_DEXPREOPT_SPEED_APPS += \
+#PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
 ## Compile SystemUI on device with `speed`.
@@ -298,9 +298,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
 # Health
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
+
+# Health
+TARGET_USE_HIDL_QTI_HEALTH := true
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
 
 # IDC
 PRODUCT_COPY_FILES += \
