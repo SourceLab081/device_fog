@@ -7,6 +7,9 @@
 DEVICE_PATH := device/xiaomi/fog
 COMMON_PATH := device/qcom/common
 
+# Board Info
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # A/B
 AB_OTA_UPDATER := true
 BOARD_USES_RECOVERY_AS_BOOT := true
