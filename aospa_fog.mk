@@ -19,6 +19,8 @@ $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_USES_BLUR := true    
+TARGET_USES_NQ_NFC := false
+TARGET_USES_ST_NFC := false
 
 PRODUCT_NAME := aospa_fog
 PRODUCT_DEVICE := fog
