@@ -4,11 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# QC common
+TARGET_BOARD_PLATFORM := bengal
+
+
 # APEX's
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Include GSI
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -17,7 +24,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -35,10 +42,15 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+PRODUCT_PACKAGES += \
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
+
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -411,9 +423,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
-
-# QC common
-TARGET_BOARD_PLATFORM := bengal
 
 TARGET_COMMON_QTI_COMPONENTS := \
     audio \
