@@ -248,7 +248,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Fastboot
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot-service.example_recovery \
     fastbootd
 
 # Fingerprint
@@ -538,6 +538,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.usb.config=mtp,adb
 endif
 
+PRODUCT_HAS_GADGET_HAL := true
+
+PRODUCT_ODM_PROPERTIES += \
+    sys.usb.mtp.batchcancel=1 \
+    vendor.usb.use_ffs_mtp=1
+
 # Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
@@ -558,7 +564,7 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
     
 # WiFi Display
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libwfdaac_vendor:32
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
