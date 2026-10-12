@@ -188,7 +188,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 -include device/xiaomi/fog/sepolicy/fog-sepolicy.mk
 
 # Treble flag
-BOARD_VNDK_VERSION := current
+#BOARD_VNDK_VERSION := current
 
 # WiFi
 CONFIG_ACS := true
