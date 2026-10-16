@@ -140,7 +140,7 @@ void vendor_load_properties() {
         // from - phone-xhdpi-6144-dalvik-heap.mk
         heapstartsize = "16m";
         heapgrowthlimit = "256m";
-        heapsize = "512m";
+        heapsize = "768m";
         heaptargetutilization = "0.5";
         heapminfree = "8m";
         heapmaxfree = "32m";
@@ -148,7 +148,7 @@ void vendor_load_properties() {
         // from - phone-xhdpi-4096-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "192m";
-        heapsize = "512m";
+        heapsize = "768m";
         heaptargetutilization = "0.6";
         heapminfree = "8m";
         heapmaxfree = "16m";
@@ -156,7 +156,7 @@ void vendor_load_properties() {
         // from - phone-xhdpi-2048-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "192m";
-        heapsize = "512m";
+        heapsize = "768m";
         heaptargetutilization = "0.75";
         heapminfree = "512k";
         heapmaxfree = "8m";
