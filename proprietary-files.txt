@@ -702,7 +702,7 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GPS - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+#-vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/bin/garden_app|987a4b0d1f2fc446e384f1d68b041819c8221d07
 vendor/bin/loc_launcher|f0b95b7d523d2785a3090c2598c4bbd6170f1ba1
 vendor/bin/lowi-server|6d999d7f4ac30c435d30842d5f360b12d2f41ae3
