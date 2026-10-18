@@ -202,7 +202,8 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 # include device/lineage/sepolicy/libperfmgr/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/power-libperfmgr
+include device/hertzify/sepolicy/libion/sepolicy.mk
+include device/hertzify/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
