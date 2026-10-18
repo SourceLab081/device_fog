@@ -9,13 +9,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Inherit from the AOSPA configuration.
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
-
- # Inherit from the AOSPA configuration.
-$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_USES_BLUR := true    
