@@ -22,7 +22,7 @@ namespace_imports = [
     "device/xiaomi/fog",
     "hardware/google/interfaces",
     "hardware/google/pixel",
-    "hardware/lineage/interfaces/power-libperfmgr",
+    "hardware/statix/interfaces/power-libperfmgr",
     "hardware/qcom-caf/bootctrl",
     "hardware/qcom-caf/common/libqti-perfd-client",
     "hardware/qcom-caf/sm8250",
@@ -30,9 +30,9 @@ namespace_imports = [
     "hardware/xiaomi",
     "vendor/qcom/opensource/commonsys/display",
     "vendor/qcom/opensource/commonsys-intf/display",
-    "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
+    "vendor/qcom/opensource/data-ipa-cfg-mgr",
     "vendor/qcom/opensource/dataservices",
-    "vendor/qcom/opensource/display",
+    "hardware/qcom-caf/sm8250/display",
 ]
 
 
