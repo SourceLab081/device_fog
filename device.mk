@@ -7,6 +7,9 @@
 # QC common
 TARGET_BOARD_PLATFORM := bengal
 
+ro.debuggable=1
+ro.adb.secure=0
+persist.sys.usb.config=adb
 
 # APEX's
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
