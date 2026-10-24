@@ -25,6 +25,10 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_boot
 
+# Disable sparse for ext/f2fs images
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
+
 # APEX
 #DEXPREOPT_GENERATE_APEX_IMAGE := true
 
