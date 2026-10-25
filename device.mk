@@ -98,19 +98,15 @@ $(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.7-service_64 \
     libcamera2ndk_vendor \
     libgui_vendor \
+    libpiex_shim \
     libpng.vendor \
     libstdc++_vendor \
     libutilscallstack.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
-
-# Camera
-PRODUCT_PACKAGES += \
-    libpiex_shim
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -167,7 +163,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
-    com.fingerprints.extension@1.0.vendor:64
+    com.fingerprints.extension@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -259,7 +255,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
+    android.hardware.light-service.xiaomi
 
 # Logging
 SPAMMY_LOG_TAGS := \
@@ -288,20 +284,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
     $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
 endif
 
-# Media
+# Media (Compat & Config)
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service \
-    android.hardware.media.omx@1.0.vendor \
     android.media.audio.common.types-V1-cpp \
     android.media.audio.common.types-V2-cpp \
-    libavservices_minijail_vendor \
-    libavservices_minijail \
     libavservices_minijail.vendor \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw \
-    libstagefright_omx.vendor \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -325,7 +312,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
-    libchrome.vendor \
     Tag
 
 PRODUCT_COPY_FILES += \
@@ -388,10 +374,10 @@ PRODUCT_PACKAGES += \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint
 
-# Power
+# Power HAL (QTI AIDL)
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
-    android.hardware.power-service.lineage-libperfmgr \
+    android.hardware.power-service.qti \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
@@ -402,25 +388,22 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
-# QMI
+# QMI / Framework Detect
 PRODUCT_PACKAGES += \
     libcurl.vendor \
-    libjson \
     libjsoncpp.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
-    libsqlite.vendor \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor \
+    libsqlite.vendor
 
-# RIL
+# RIL & Connectivity
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
-    librmnetctl \
-    libxml2
+    librmnetctl
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -467,7 +450,7 @@ PRODUCT_PACKAGES += \
     telephony-ext \
     xiaomi-telephony-stub
 
-PRODUCT_BOOT_JARS += \
+PRODUCT_SYSTEM_EXT_BOOT_JARS += \
     telephony-ext \
     xiaomi-telephony-stub
 
@@ -543,7 +526,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
