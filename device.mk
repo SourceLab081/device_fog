@@ -622,5 +622,5 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.telephony.iwlan_operation_mode=legacy
 
 # Zygote
-PRODUCT_SYSTEM_PROPERTIES += \
-    zygote.critical_window.minute=10
+#PRODUCT_SYSTEM_PROPERTIES += \
+#    zygote.critical_window.minute=10
