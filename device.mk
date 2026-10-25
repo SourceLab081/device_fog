@@ -327,6 +327,10 @@ PRODUCT_COPY_FILES += \
 # Health
 TARGET_USE_HIDL_QTI_HEALTH := true
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.xiaomi
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
