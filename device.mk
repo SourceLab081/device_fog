@@ -49,8 +49,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
-#$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+#$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -212,7 +212,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.max_virtual_display_dimension=4096
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.set_idle_timer_ms=1100 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.sf.force_hwc_brightness=1
