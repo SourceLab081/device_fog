@@ -339,13 +339,25 @@ PRODUCT_PACKAGES += \
 
 # LMK
 PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lmk.critical_upgrade=true \
+    ro.lmk.downgrade_pressure=60 \
+    ro.lmk.filecache_min_kb=153600  \
+    ro.lmk.kill_heaviest_task=false \
     ro.lmk.kill_timeout_ms=100 \
-    ro.lmk.use_minfree_levels=true \
-    ro.lmk.psi_complete_stall_ms=70 \
-    ro.lmk.swap_free_low_percentage=20 \
-    ro.lmk.swap_util_max=90 \
+    ro.lmk.stall_limit_critical=40 \
     ro.lmk.thrashing_limit=30 \
-    ro.lmk.thrashing_limit_decay=50
+    ro.lmk.thrashing_limit_decay=50 \
+    ro.lmk.upgrade_pressure=40 \
+    ro.lmk.use_minfree_levels=true
+
+# Media
+MSM_VIDC_TARGET_LIST := bengal
+
+include hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+
+PRODUCT_COPY_FILES += \
+    device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
 
 # Media
 PRODUCT_ODM_PROPERTIES += \
@@ -518,8 +530,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.sensors.hal_trigger_ssr=false
 
 # Storage.xml moment
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.sys.binary_xml=false
+#PRODUCT_SYSTEM_PROPERTIES += \
+#    persist.sys.binary_xml=false
 
 # Thermal
 PRODUCT_VENDOR_PROPERTIES += \
