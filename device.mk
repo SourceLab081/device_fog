@@ -7,10 +7,6 @@
 # QC common
 TARGET_BOARD_PLATFORM := bengal
 
-ro.debuggable=1
-ro.adb.secure=0
-persist.sys.usb.config=adb
-
 # APEX's
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -78,6 +74,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    persist.sys.usb.config=mtp,adb
+
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.audio.sdk.fluencetype=none \
     vendor.audio.hw.aac.encoder=false
@@ -93,7 +94,16 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.scenario.support=true \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.us.proximity=true
+    ro.vendor.audio.us.proximity=true \
+    ro.audio.monitorRotation=true \
+    ro.vendor.audio.afe.record=true \
+    ro.vendor.audio.scenario.support=false \
+    ro.vendor.audio.sfx.earadj=true \
+    ro.vendor.audio.sfx.scenario=false \
+    ro.vendor.audio.spk.clean=true \
+    ro.vendor.audio.sos=true \
+    ro.vendor.audio.voice.change.support=true \
+    ro.vendor.audio.voice.change.version=2 
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundtrigger.appdefine.cnn.level=31 \
@@ -195,6 +205,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Dexpreopt
 #PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
+# Dex/ART optimization
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+USE_DEX2OAT_DEBUG := false
 
 ## Compile SystemUI on device with `speed`.
 PRODUCT_VENDOR_PROPERTIES += \
@@ -261,7 +275,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+    android.hardware.biometrics.fingerprint-service.xiaomi
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
