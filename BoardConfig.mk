@@ -5,6 +5,8 @@
 #
 
 DEVICE_PATH := device/xiaomi/fog
+HARDWARE_PATH := hardware/xiaomi
+
 # A/B
 BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_UPDATER := true
@@ -53,8 +55,9 @@ BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(HARDWARE_PATH)/vintf/xiaomi_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
-DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
+#DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS += c3qn
 ODM_MANIFEST_C3QN_FILES := $(DEVICE_PATH)/configs/vintf/manifest_c3qn.xml
