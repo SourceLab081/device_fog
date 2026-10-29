@@ -15,5 +15,5 @@
 runtime_resource_overlay {
     name: "SettingsProvider220333QL",
     sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }
