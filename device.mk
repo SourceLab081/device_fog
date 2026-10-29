@@ -74,9 +74,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.adb.secure=0 \
-    ro.debuggable=1 
+#PRODUCT_SYSTEM_PROPERTIES += \
+#    ro.adb.secure=0 \
+#   ro.debuggable=1 
 
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.audio.sdk.fluencetype=none \
