@@ -20,14 +20,11 @@ from extract_utils.main import (
 
 namespace_imports = [
     "device/xiaomi/fog",
-    "hardware/google/interfaces",
-    "hardware/google/pixel",
-    "hardware/lineage/interfaces/power-libperfmgr",
-    "hardware/qcom-caf/bootctrl",
-    "hardware/qcom-caf/common/libqti-perfd-client",
-    "hardware/qcom-caf/sm8250",
-    "hardware/qcom-caf/wlan",
+    "hardware/qcom/bootctrl",
     "hardware/xiaomi",
+    "vendor/qcom/common/vendor/display/4.19",
+    "vendor/qcom/common/vendor/perf",
+    "vendor/qcom/common/vendor/wlan",
     "vendor/qcom/opensource/commonsys/display",
     "vendor/qcom/opensource/commonsys-intf/display",
     "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
