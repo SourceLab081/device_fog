@@ -205,16 +205,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
-# ION
-$(call soong_config_set_bool,libion,legacy_impl,true)
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
-
-# Init
-$(call soong_config_set,libinit,vendor_init_lib,libinit_fog)
 
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
@@ -326,7 +320,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FogCarrierConfigOverlay \
-    FogLineageSDKOverlay \
     FogNoCutoutOverlay \
     FogSettingsOverlay \
     FogSystemUIOverlay \
