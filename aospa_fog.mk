@@ -11,6 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from the AOSPA configuration.
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
+
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from fog device
@@ -18,8 +19,8 @@ $(call inherit-product, device/xiaomi/fog/device.mk)
 
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_USES_BLUR := true    
-#TARGET_USES_NQ_NFC := false
-#TARGET_USES_ST_NFC := false
+TARGET_USES_NQ_NFC := false
+TARGET_USES_ST_NFC := false
 TARGET_DISABLES_GMS := true
 WITH_GMS := false
 
