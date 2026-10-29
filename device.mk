@@ -76,8 +76,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.adb.secure=0 \
-    ro.debuggable=1 \
-    persist.sys.usb.config=mtp,adb
+    ro.debuggable=1 
 
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.audio.sdk.fluencetype=none \
