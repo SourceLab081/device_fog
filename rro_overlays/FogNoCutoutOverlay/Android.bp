@@ -2,5 +2,5 @@ runtime_resource_overlay {
     name: "FogNoCutoutOverlay",
     theme: "DisplayCutoutNoCutout",
     overrides: ["NoCutoutOverlay"],
-    vendor: true,
+    device_specific: true,
 }

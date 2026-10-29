@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "FogFrameworksOverlayCommon",
-    vendor: true,
+    device_specific: true,
 }

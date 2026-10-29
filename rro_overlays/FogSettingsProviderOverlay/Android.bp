@@ -5,19 +5,19 @@
 
 runtime_resource_overlay {
     name: "FogSettingsProviderOverlay",
-    vendor: true,
+    device_specific: true,
 }
 
 runtime_resource_overlay {
     name: "WindSettingsProviderOverlay",
     manifest: "AndroidManifestC3QL.xml",
     resource_dirs: ["res"],
-    vendor: true,
+    device_specific: true,
 }
 
 runtime_resource_overlay {
     name: "RainSettingsProviderOverlay",
     manifest: "AndroidManifestC3QN.xml",
     resource_dirs: ["res"],
-    vendor: true,
+    device_specific: true,
 }

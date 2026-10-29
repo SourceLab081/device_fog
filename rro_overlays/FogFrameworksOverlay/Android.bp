@@ -5,26 +5,26 @@
 
 runtime_resource_overlay {
     name: "FogFrameworksOverlay",
-    vendor: true,
+    device_specific: true,
 }
 
 runtime_resource_overlay {
     name: "FogFrameworksOverlayIN",
     manifest: "AndroidManifestC3QB.xml",
     resource_dirs: ["res"],
-    vendor: true,
+    device_specific: true,
 }
 
 runtime_resource_overlay {
     name: "WindFrameworksOverlay",
     manifest: "AndroidManifestC3QL.xml",
     resource_dirs: ["res"],
-    vendor: true,
+    device_specific: true,
 }
 
 runtime_resource_overlay {
     name: "RainFrameworksOverlay",
     manifest: "AndroidManifestC3QN.xml",
     resource_dirs: ["res"],
-    vendor: true,
+    device_specific: true,
 }

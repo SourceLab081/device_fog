@@ -333,6 +333,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AOSPAFogFrameworksOverlay \
     FogCarrierConfigOverlay \
     FogNoCutoutOverlay \
     FogSettingsOverlay \
