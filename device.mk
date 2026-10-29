@@ -13,8 +13,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
+TARGET_COMMON_QTI_COMPONENTS := \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    media \
+    nfc \
+    rro_overlays \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wfd \
+    wlan
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
