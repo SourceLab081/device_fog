@@ -216,6 +216,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
 # Display
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
+# Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     libdisplayconfig.qti \
