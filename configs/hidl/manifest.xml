@@ -400,16 +400,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>imsrtpservice</instance>
         </interface>
     </hal>
-    <!-- Perf HAL service -->
-    <hal format="hidl">
-         <name>vendor.qti.hardware.perf</name>
-         <transport>hwbinder</transport>
-         <version>2.2</version>
-         <interface>
-             <name>IPerf</name>
-             <instance>default</instance>
-         </interface>
-     </hal>
     <!-- Hidl service for 5G network apis -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -519,6 +509,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>camerapostprocservice</instance>
         </interface>
     </hal>
+        <!--  QCC HAL Service -->
+    <hal format="hidl">
+       <name>vendor.qti.hardware.qccvndhal</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IQccvndhal</name>
+           <instance>qccvndhal</instance>
+       </interface>
+    </hal>
     <!-- eMBMS HAL Service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.embmssl</name>
@@ -528,16 +528,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IEmbms</name>
             <instance>embmsslServer0</instance>
         </interface>
-    </hal>
-    <!-- PASR Manager -->
-    <hal format="hidl">
-       <name>vendor.qti.power.pasrmanager</name>
-       <transport>hwbinder</transport>
-       <version>1.0</version>
-       <interface>
-           <name>IPasrManager</name>
-           <instance>default</instance>
-       </interface>
     </hal>
     <!-- MwqemAdapter HAL service -->
     <hal format="hidl">
