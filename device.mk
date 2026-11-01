@@ -308,7 +308,7 @@ PRODUCT_COPY_FILES += \
     android.hardware.health@2.1-service
 
 # Health
-TARGET_USE_HIDL_QTI_HEALTH := true
+#TARGET_USE_HIDL_QTI_HEALTH := true
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -317,6 +317,8 @@ PRODUCT_PACKAGES += \
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # IDC
 PRODUCT_COPY_FILES += \
