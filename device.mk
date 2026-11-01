@@ -481,12 +481,12 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wlan
 
 # QMI
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.qcomsysd.enabled=1
+#PRODUCT_VENDOR_PROPERTIES += \
+ #   persist.vendor.qcomsysd.enabled=1
 
 # Radio
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.telephony.block_binder_thread_on_incoming_calls=false
+#PRODUCT_SYSTEM_EXT_PROPERTIES += \
+   # ro.telephony.block_binder_thread_on_incoming_calls=false
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
@@ -604,6 +604,9 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 #PRODUCT_PACKAGES += \
     libwfdaac_vendor:32
+
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     config.disable_rtt=true
