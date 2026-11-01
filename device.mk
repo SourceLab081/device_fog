@@ -217,8 +217,7 @@ TARGET_USE_AIDL_QTI_MEMTRACK := true
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
-    libdisplayconfig.qti \
-    disable_configstore
+    libdisplayconfig.qti 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
