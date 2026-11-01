@@ -216,8 +216,7 @@ TARGET_USE_AIDL_QTI_MEMTRACK := true
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
-    libdisplayconfig.qti 
+    android.frameworks.displayservice@1.0.vendor 
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.sf.force_hwc_brightness=1
