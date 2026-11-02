@@ -378,7 +378,7 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
 # libtinyxml-v34
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libtinyxml2-v34
 
 # Partitions
