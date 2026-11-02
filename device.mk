@@ -325,8 +325,7 @@ PRODUCT_PACKAGES += \
     FogCarrierConfigOverlay \
     FogNoCutoutOverlay \
     FogSettingsOverlay \
-    FogSystemUIOverlay \
-    FogTelephonyOverlay
+    FogSystemUIOverlay 
 
 PRODUCT_PACKAGES += \
     FogFrameworksOverlayCommon \
@@ -429,7 +428,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Telephony
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
@@ -439,11 +438,11 @@ PRODUCT_PACKAGES += \
     telephony-ext \
     xiaomi-telephony-stub
 
-PRODUCT_SYSTEM_EXT_BOOT_JARS += \
+# PRODUCT_SYSTEM_EXT_BOOT_JARS += \
     telephony-ext \
     xiaomi-telephony-stub
 
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
