@@ -98,7 +98,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
@@ -188,11 +188,11 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.data.netmgrd.qos.enable=true
 
 # QMI
-PRODUCT_VENDOR_PROPERTIES += \
+#PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcomsysd.enabled=1
 
 # Radio
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
+#PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.telephony.block_binder_thread_on_incoming_calls=false
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -252,6 +252,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.wlan.dbs=2 \
     ro.telephony.iwlan_operation_mode=legacy	
 
-PRODUCT_SYSTEM_PROPERTIES += \
+#These two variables are already present in TARGET_BUILD_VARIANT=user
+#PRODUCT_SYSTEM_PROPERTIES += \
     ro.adb.secure=0 \
     ro.debuggable=1 
