@@ -159,17 +159,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
-    libqdMetaData \
-    libqdMetaData.system \
+    libqdmetadata \
+    libqdmetadata.system \
     libsdmcore \
     libsdmutils \
     vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.qti.hardware.display.mapperextensions@1.1.vendor \
-    android.hardware.memtrack-service.qti
+    vendor.qti.hardware.memtrack-service
 
 #PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
