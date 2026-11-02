@@ -48,6 +48,17 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+#PRODUCT_PACKAGES += \
+    android.hardware.audio.service
+
+#PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0 \
+    android.hardware.audio.common@7.0 \
+    android.hardware.audio.common@7.0-util \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0 \
+    android.hardware.audio.effect@7.0-impl
+
 # Audio HAL (AOSPA A17 / CLO Bengal)
 PRODUCT_PACKAGES += \
     acdbdata_adsp_avs_config.bin_symlink \
