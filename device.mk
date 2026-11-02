@@ -304,10 +304,7 @@ endif
 
 # Media (Compat & Config)
 PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V1-cpp \
-    android.media.audio.common.types-V2-cpp \
-    libavservices_minijail.vendor \
-    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+    libavservices_minijail
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
