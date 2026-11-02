@@ -87,6 +87,7 @@ BOARD_KERNEL_CMDLINE += \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off \
+    androidboot.selinux=permissive \
     kasan=off
 
 TARGET_KERNEL_ARCH := arm64
