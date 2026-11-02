@@ -381,12 +381,12 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint
 
 # Power HAL (QTI AIDL)
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
     android.hardware.power-service.qti \
     libqti-perfd-client
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
