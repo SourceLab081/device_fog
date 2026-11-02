@@ -194,9 +194,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Health
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor \
     android.hardware.health-service.qti
+
+# Health
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
+
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery \
+    vendor.lineage.health-service.default
 
 # HIDL
 PRODUCT_PACKAGES += \
