@@ -163,7 +163,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     gralloc.qcom
 
 # DRM
@@ -210,7 +210,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # HIDL
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
@@ -364,7 +364,7 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
 # libtinyxml-v34
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libtinyxml2-v34
 
 # Partitions
@@ -390,12 +390,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
 # QMI / Framework Detect
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjsoncpp.vendor \
     libqti_vndfwk_detect \
@@ -405,7 +405,7 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor
 
 # RIL & Connectivity
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.secure_element@1.2.vendor \
@@ -435,7 +435,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi 
 
 # Servicetracker
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Telephony
@@ -496,7 +496,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Vendor service manager
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Verified Boot
