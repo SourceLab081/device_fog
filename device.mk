@@ -555,7 +555,7 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-$(call inherit-product, $(DEVICE_PATH)/configs/props.mk)
+$(call inherit-product, $(LOCAL_PATH)/configs/props.mk)
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
