@@ -22,15 +22,11 @@ namespace_imports = [
     "device/xiaomi/fog",
     "hardware/qcom/bootctrl",
     "hardware/xiaomi",
-    "vendor/qcom/common/vendor/display/4.19",
     "vendor/qcom/common/vendor/perf",
     "vendor/qcom/common/vendor/wlan",
-    "vendor/qcom/opensource/commonsys/display",
-    "vendor/qcom/opensource/commonsys-intf/display",
     "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
     "vendor/qcom/opensource/dataservices",
-    "vendor/qcom/opensource/display",
-]
+ ]
 
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
