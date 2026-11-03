@@ -48,8 +48,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.qcom.rc",
-    filename: "ueventd.rc",
-    src: "ueventd.qcom.rc",
+    name: "ueventd.fog.rc",
+    filename: "ueventd.fog.rc",
+    src: "ueventd.fog.rc",
     vendor: true,
 }

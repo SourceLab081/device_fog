@@ -251,7 +251,8 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    ueventd.fog.rc
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 #PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
