@@ -20,12 +20,6 @@ sh_binary {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.qcom.sh",
-    src: "init.qcom.sh",
-    vendor: true,
-}
-
 // Init configuration files
 prebuilt_etc {
     name: "fstab.qcom",
@@ -44,20 +38,6 @@ prebuilt_etc {
     src: "init.qcom.power.rc",
     sub_dir: "init/hw",
     vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.qcom.rc",
-    src: "init.qcom.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.recovery.qcom.rc",
-    src: "init.recovery.qcom.rc",
-    sub_dir: "init",
-    recovery: true,
 }
 
 prebuilt_etc {
