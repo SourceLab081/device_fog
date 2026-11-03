@@ -241,18 +241,14 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 PRODUCT_PACKAGES += \
-    init.qcom.early_boot.sh \
-    init.qcom.sh
+    init.qcom.early_boot.sh 
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.zram \
     init.qcom.power.rc \
-    init.qcom.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.fog.rc \
-    ueventd.qcom.rc
+    ueventd.fog.rc 
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 #PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
