@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     liba2dpoffload
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
@@ -303,9 +303,22 @@ PRODUCT_SYSTEM_PROPERTIES += \
     $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
 endif
 
-# Media (Compat & Config)
+# Media
+MSM_VIDC_TARGET_LIST := bengal
+
+include hardware/qcom/media/conf_files/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+
+PRODUCT_COPY_FILES += \
+    device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
 PRODUCT_PACKAGES += \
-    libavservices_minijail
+    init.qti.media.sh
+
+PRODUCT_PACKAGES += \
+    ibavservices_minijail \
+    libavservices_minijail.vendor \
+    libstagefright_omx.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
@@ -317,7 +330,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
 
 # Network
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
 
 PRODUCT_COPY_FILES += \
