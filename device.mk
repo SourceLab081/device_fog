@@ -6,6 +6,9 @@
 
 TARGET_BOARD_PLATFORM := bengal
 
+# Face unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
@@ -243,14 +246,17 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 PRODUCT_PACKAGES += \
-    init.qcom.early_boot.sh 
+    init.qcom.early_boot.sh \
+    init.qcom.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.zram \
     init.qcom.power.rc \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.fog.rc 
+    ueventd.qcom.rc
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
 #PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
