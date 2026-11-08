@@ -19,7 +19,7 @@ $(call inherit-product, device/xiaomi/fog/device.mk)
 
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_USES_BLUR := true    
-TARGET_USES_NQ_NFC := false
+TARGET_USES_NQ_NFC := true
 TARGET_USES_ST_NFC := false
 TARGET_DISABLES_GMS := true
 WITH_GMS := false
