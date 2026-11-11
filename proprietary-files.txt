@@ -625,10 +625,6 @@ vendor/etc/ftm_test_config_bengal-qrd-snd-card|26935d4e79442e6dc7bed1232b19d1986
 vendor/etc/ftm_test_config_bengal-scubaidp-snd-card|084ec1fab58d90238315594d8c5d25fb31b826d9
 vendor/etc/ftm_test_config_bengal-scubaqrd-snd-card|4d4267fae191c952e0904b9977ba8ee4533d71c2
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
@@ -868,15 +864,6 @@ vendor/firmware/scuba_ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
 vendor/firmware/scuba_ipa_fws.elf|85e577a34df2829fcd2f1207eecd551f900a69ea
 vendor/firmware/scuba_ipa_fws.mdt|78c1d8058ff48b25e648aa14c607f587d21428d9
 
-# Keymaster
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
-
 # Listen - from MIUI
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0
 vendor/lib/libcapiv2svacnn.so|c897fbba664fcb0ea1951d3220d8db54ae0d7995
@@ -1014,13 +1001,6 @@ vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
-
-# QSP
-vendor/bin/vendor.qti.qspmhal@1.0-service
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
-vendor/etc/seccomp_policy/qspm.policy
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
 -system_ext/app/DeviceInfo/DeviceInfo.apk
