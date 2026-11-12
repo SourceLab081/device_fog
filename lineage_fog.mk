@@ -15,7 +15,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-MISTOS_MAINTAINER="teleg3_7"
+TARGET_SUPPORTS_OMX_SERVICE := false
 # Gms 
 WITH_GMS := false
 # Ship Pixel Launcher
@@ -24,7 +24,7 @@ TARGET_DEFAULT_PIXEL_LAUNCHER := false
 TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
-MISTOS_BUILDTYPE := UNOFFICIAL
+EVO_BUILD_TYP := UNOFFICIAL
 
 PRODUCT_NAME := lineage_fog
 PRODUCT_DEVICE := fog
