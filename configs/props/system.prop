@@ -1,3 +1,13 @@
+# These must be set in the mistos rom
+ro.mist.display=720 x 1650, 60 hz
+ro.mist.battery=5000mah
+ro.mist.soc=Snapdragon® 680
+ro.mist.camera=50MP + 2MP
+ro.mist.front=5MP
+ro.mist.platform=SM6225-KH
+ro.mist.screen=6.7' IPS LCD
+ro.mist.device.name=Redmi 10C 
+
 # Bluetooth
 persist.bluetooth.disableabsvol=true
 persist.sys.btstack.absvolfeature=false
