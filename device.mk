@@ -580,3 +580,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
+
+# MiuiCamera
+$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
