@@ -204,7 +204,7 @@ PRODUCT_PACKAGES += \
     FM2
 
 # GNSS
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor \
