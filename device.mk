@@ -578,5 +578,8 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.ota.id=clover_fog_$(shell date -u +%Y%m%d%H%M)
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
