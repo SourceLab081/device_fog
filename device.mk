@@ -18,8 +18,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+
+# Always preopt extracted APKs to prevent extracting out of the APK for gms modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
+# Reduce system server verbosity
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+
+# ART
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+USE_DEX2OAT_DEBUG := false
+
+# ART / Dexpreopt
+PRODUCT_USES_DEFAULT_ART_CONFIG := true
+
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_DEBUG_INFO := false
+DEX_PREOPT_DEFAULT := speed-profile
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Treble
-PRODUCT_FULL_TREBLE_OVERRIDE := true
+#PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 TARGET_COMMON_QTI_COMPONENTS := \
     audio \
@@ -80,6 +104,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
+    audio.r_submix.default \
+    libvolumelistener \
     libaudio-resampler \
     libaudioroute \
     libqcompostprocbundle \
@@ -88,10 +114,7 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     sound_trigger.primary.bengal
 
-# Audio Daemon
-PRODUCT_PACKAGES += \
-    audioadsprpcd
-
+   
 # Audio configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -111,10 +134,14 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # Bluetooth
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1 \
     android.hardware.bluetooth@1.1.vendor \
     liba2dpoffload
+
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default
+
 
 #PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -129,11 +156,17 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+
+#$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.7-service_64 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libgui_vendor \
     libpiex_shim \
@@ -186,10 +219,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey \
-    libcrypto_shim \
-    libcrypto_shim.vendor
+        android.hardware.drm-service.clearkey 
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -222,10 +252,16 @@ PRODUCT_COPY_FILES += \
 # Health
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
+#    android.hardware.health-service.qti \
+#    android.hardware.health-service.qti_recovery \
+
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery \
     vendor.lineage.health-service.default
+
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,true)
 
 # HIDL
 #PRODUCT_PACKAGES += \
@@ -240,8 +276,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # IPACM
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
@@ -254,13 +293,11 @@ PRODUCT_PACKAGES += \
     fstab.zram \
     init.qcom.power.rc \
     init.qcom.rc \
-    init.recovery.qcom.rc \
-    init.target.rc \
-    ueventd.qcom.rc
+    init.target.rc 
 
 # Inherit several Android Go Configurations(Beneficial for everyone, even on non-Go devices)
-#PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-#PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
 
 # IRQ balance
 PRODUCT_COPY_FILES += \
@@ -335,6 +372,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
     $(LOCAL_PATH)/configs/media/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
 
+$(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
+
 # Network
 #PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
@@ -382,6 +421,7 @@ PRODUCT_PACKAGES += \
     FogSettingsProviderOverlayIN2 \
     WindSettingsProviderOverlay \
     RainSettingsProviderOverlay \
+    FogTelephonyOverlay \
     FogWifiOverlay \
     FogWifiOverlayIN \
     FogWifiOverlayIN2 \
@@ -390,6 +430,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
+
+# OTA updates: AOSPA only ships ParanoidHub in STABLE and BETA builds
+PRODUCT_PACKAGES += \
+    ParanoidHub
 
 # libtinyxml-v34
 #PRODUCT_PACKAGES += \
@@ -407,6 +451,9 @@ PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint
+
+PRODUCT_PACKAGES += \
+    android.hardware.power-service
 
 # Power HAL (QTI AIDL)
 #PRODUCT_PACKAGES += \
@@ -464,8 +511,17 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/wlan/qcwcn/wpa_supplicant_8_lib
 
 # Servicetracker
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
+
+# Telephony
+PRODUCT_PACKAGES += \
+    ims_hidl \
+    qcrilNrDb_vendor \
+    xiaomi-telephony-stub
+
+PRODUCT_BOOT_JARS += \
+    xiaomi-telephony-stub
 
 # Telephony
 # PRODUCT_PACKAGES += \
@@ -492,6 +548,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# Ueventd
+#PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -502,7 +562,10 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # USB
-PRODUCT_PACKAGES += \
+PRODUCT_HAS_GADGET_HAL := true
+
+# USB
+#PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.basic \
     android.hardware.usb.gadget-service.qti
 
@@ -521,8 +584,13 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Vendor ramdisk
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.default \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 # Vendor service manager
 #PRODUCT_PACKAGES += \
@@ -566,7 +634,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml

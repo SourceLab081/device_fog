@@ -87,8 +87,7 @@ BOARD_KERNEL_CMDLINE += \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off \
-    androidboot.selinux=permissive \
-    kasan=off
+    androidboot.selinux=permissive 
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/fog-perf_defconfig
@@ -168,6 +167,8 @@ TARGET_RELEASETOOLS_EXTENSIONS ?= $(DEVICE_PATH)
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
+# SELinux
+include vendor/aospa/sepolicy/libion/sepolicy.mk
 include device/xiaomi/sepolicy/SEPolicy.mk
 include device/xiaomi/fog/sepolicy/SEPolicy.mk
 #SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
