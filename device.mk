@@ -241,6 +241,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         android.hardware.drm-service.clearkey 
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot-service.example_recovery \
+    fastbootd
+    
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \

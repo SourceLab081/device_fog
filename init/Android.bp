@@ -13,6 +13,12 @@ cc_library_static {
     ]
 }
 
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
+    vendor: true,
+}
+
 // Init configuration files
 prebuilt_etc {
     name: "fstab.qcom",
