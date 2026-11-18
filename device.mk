@@ -57,7 +57,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
 #android.hardware.audio@6.0-impl \
-#android.hardware.audio.effect@6.0-impl \
+#android.hardware.audio.effect@6.0-impl 
 PRODUCT_PACKAGES += \
     acdbdata_adsp_avs_config.bin_symlink \
     android.hardware.audio.service \
@@ -384,6 +384,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+   AOSPAFogFrameworksOverlay \
     CarrierConfigFog \
     DialerFog \
     FrameworksFog \
@@ -503,7 +504,7 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # Servicetracker
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 PRODUCT_COPY_FILES += \
