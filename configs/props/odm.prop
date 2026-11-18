@@ -1,2 +1,7 @@
-# Fwk detect
 ro.vendor.qti.va_odm.support=1
+ro.vendor.audio.sdk.fluencetype=none
+vendor.audio.hw.aac.encoder=false
+media.settings.xml=/vendor/etc/media_profiles_khaje.xml
+vendor.mm.enable.qcom_parser=63963135
+sys.usb.mtp.batchcancel=1
+vendor.usb.use_ffs_mtp=1s

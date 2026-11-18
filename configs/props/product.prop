@@ -1,3 +1,8 @@
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.charger.enable_suspend=true \
+    persist.vendor.quick.charge=1 \
+    ro.charger.disable_init_blank=true
+
 # Audio
 audio_para_version=C3Q-Audiopara-V01-20211102
 audio.deep_buffer.media=true
@@ -6,7 +11,7 @@ audio.sys.offload.pstimeout.secs=3
 ro.config.vc_call_vol_steps=11
 
 # Bluetooth
-bluetooth.device.class_of_device=90,2,12
+#bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.idle_cur_ma=7
 bluetooth.hardware.power.operating_voltage_mv=3700
 bluetooth.hardware.power.rx_cur_ma=75
@@ -52,3 +57,9 @@ ro.vold.umsdirtyratio=20
 ro.ril.disable.power.collapse=0 
 power.saving.mode=1
 pm.sleep_mode=1
+
+# Maintainer
+ro.aospa.maintainer=Teleg3_7
+
+# Hardware info
+ro.aospa.soc_name=Qualcomm Snapdragon 680 4G

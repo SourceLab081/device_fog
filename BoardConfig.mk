@@ -153,6 +153,13 @@ TARGET_BOARD_PLATFORM := bengal
 # Power
 TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_fog
 
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888

@@ -106,9 +106,15 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.hw.fm.init=0
 vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
 # Camera
 persist.vendor.camera.perflock.enable=0
+camera.disable_zsl_mode=1
+
+# Chipset
+ro.soc.manufacturer=QTI
 
 # Charger
 persist.vendor.quick.charge=1
@@ -124,9 +130,11 @@ dalvik.vm.dex2oat-cpu-set=4,5,6,7
 dalvik.vm.dex2oat-threads=4
 dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
 dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.systemuicompilerfilter=speed
+dalvik.vm.dex2oat64.enabled=true
 
 # Display
-debug.renderengine.blur_algorithm=kawase2_fix_aliasing
+#debug.renderengine.blur_algorithm=kawase2_fix_aliasing
 debug.sf.disable_client_composition_cache=0
 debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_gl_backpressure=false
@@ -192,8 +200,12 @@ vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 # DRM
 drm.service.enabled=true
 
+#FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # DPM
 persist.vendor.dpmhalservice.enable=1
+persist.dpm.feature=1
 
 # Fingerprint
 persist.vendor.fingerprint.type=rear
@@ -202,6 +214,9 @@ persist.vendor.fingerprint.type=rear
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+
+#QMI
+persist.vendor.qcomsysd.enabled=1
 
 # Media
 vendor.media.target.version=3
@@ -233,6 +248,9 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.radio.snapshot_enabled=1
 persist.vendor.radio.snapshot_timer=5
 persist.vendor.radio.vdp_on_ims_cap=1
+ro.telephony.default_network=33,33
+ro.vendor.radio.features_common=3
+telephony.lteOnCdmaDevice=1
 
 # RIL
 vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
@@ -264,6 +282,9 @@ ro.vendor.audio.soundtrigger=sva
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
 
+#Time Service
+persist.timed.enable=true
+
 # USB
 vendor.usb.controller=4e00000.dwc3
 vendor.usb.device=4e00000.ssusb
@@ -279,10 +300,6 @@ sys.usb.mtp.batchcancel=1
 
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
-
-# SoC
-ro.soc.manufacturer=QTI
-ro.soc.model=SM6225
 
 # Zygote
 zygote.critical_window.minute=10
