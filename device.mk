@@ -160,8 +160,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
-$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
-#$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+#$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Boot debugging: adb comes up without the authorization prompt (the screen
 # never gets past the logo), the kernel log goes into logcat and every boot's
