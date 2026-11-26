@@ -12,38 +12,3 @@ cc_library_static {
         "system/libbase/include"
     ]
 }
-
-sh_binary {
-    name: "init.qcom.early_boot.sh",
-    src: "init.qcom.early_boot.sh",
-    vendor: true,
-}
-
-// Init configuration files
-prebuilt_etc {
-    name: "fstab.qcom",
-    src: "fstab.qcom",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "fstab.zram",
-    src: "fstab.zram",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.qcom.power.rc",
-    src: "init.qcom.power.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.target.rc",
-    src: "init.target.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-
