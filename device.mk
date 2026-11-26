@@ -53,7 +53,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
-    keymaster \
     media \
     nfc \
     rro_overlays \
@@ -259,6 +258,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FM2
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # GNSS
 #PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti \
@@ -351,6 +354,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
