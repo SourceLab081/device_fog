@@ -46,6 +46,7 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 #PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 TARGET_COMMON_QTI_COMPONENTS := \
+    alarm \
     audio \
     av \
     bt \
